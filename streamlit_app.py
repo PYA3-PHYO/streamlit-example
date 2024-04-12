@@ -23,24 +23,20 @@ def create_opencv_image_from_stringio(img_stream):
 model  = YOLO('runs/best.pt')
 uploaded_file = st.file_uploader("Choose a file", type=["png", "jpg", "jpeg"])
 if uploaded_file is not None:
+            st.write(uploaded_file)
             img = Image.open(uploaded_file)
             st.image(img, caption='Uploaded Image')
             string_img = str(uploaded_file)
             cv_image = create_opencv_image_from_stringio(string_img)
-            ts = datetime.timestamp(datetime.now())
-            imgpath = os.path.join('data/uploads', str(ts)+uploaded_file.name)
-            outputpath = os.path.join(
-                 'data/outputs', os.path.basename(imgpath))
-            with open(imgpath, mode="wb") as f:
-                f.write(uploaded_file.getbuffer())
+            img_array = np.asarray(cv_image)
+        
 
 if st.button('Detect..'):
     st.header('Here is your Result!', divider='rainbow')
     # 2) pass image to the model to get the detection result
     with st.spinner('Wait for it...'):
-        # pred = model(imgpath)
-        # pred.orig_img
-        result_img = model(imgpath, imgsz=640, conf=0.25)
+    
+        result_img = model.predict(img, imgsz=640, conf=0.25)
         # result_img_array = result_img.orig_img
         arry_img_result = result_img[0].plot()
         
