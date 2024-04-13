@@ -1,6 +1,11 @@
-# Welcome to Streamlit!
+# Welcome to Aurora Vehicle type detection Project!
 
-Edit `/streamlit_app.py` to customize this app to your heart's desire. :heart:
+This web application utilizes the cutting-edge YOLOv8 object detection model to instantly recognize and classify vehicles in images
 
-If you have any questions, checkout our [documentation](https://docs.streamlit.io) and [community
-forums](https://discuss.streamlit.io).
+We applied YOLOv8, the latest iteration of the You Only Look Once algorithm, in this project.
+This  model has been trained to identify five key vehicle classes:
+1.Cars
+2.Buses
+3.Trucks
+4.Motorcycles
+5.Ambulances
