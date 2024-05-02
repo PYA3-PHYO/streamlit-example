@@ -10,4 +10,4 @@ This  model has been trained to identify five key vehicle classes:
 4.Motorcycles
 5.Ambulances
 
-Althought the accuracy of best.pt model is not very high because of the train data quality, you can try example in streamlit_app.py or check the source code for model training in model training folder.
+Althought the accuracy of best.pt model is not very high because of the train data quality, you can try example in streamlit_app.py or check the source code for model training in train_model folder.
