@@ -1,4 +1,4 @@
-# Welcome to Aurora Vehicle type detection Project!
+# Welcome to Aurora Vehicle Type Detection Project!
 
 This web application utilizes the cutting-edge YOLOv8 object detection model to instantly recognize and classify vehicles in images
 
